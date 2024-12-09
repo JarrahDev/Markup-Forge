@@ -1,14 +1,7 @@
 components:
-- components: []
-  layout_properties: {slot: default}
-  name: content_panel
-  properties: {col_widths: '{}'}
-  type: ColumnPanel
-- layout_properties: {slot: nav-right}
-  name: navbar_links
-  properties: {}
-  type: FlowPanel
-container:
-  properties: {html: '@theme:standard-page.html'}
-  type: HtmlTemplate
+- layout_properties: {grid_position: 'NNUFSK,JBZNBH'}
+  name: label_1
+  properties: {align: center, bold: true, italic: true, text: M A R K U P   F O R G E}
+  type: Label
+container: {type: ColumnPanel}
 is_package: true
