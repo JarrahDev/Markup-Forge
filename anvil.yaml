@@ -1,6 +1,12 @@
 allow_embedding: false
 dependencies: []
 name: Markup Forge
+native_deps:
+  head_html: |+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@600&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
 package_name: Markup_Forge
 renamed: true
 runtime_options:

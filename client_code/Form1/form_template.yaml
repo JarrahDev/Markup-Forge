@@ -1,9 +1,10 @@
-components:
-- layout_properties: {grid_position: 'QCUARK,PECLIV'}
-  name: label_1
-  properties: {bold: true, italic: false, text: M A R K U P   F O R G E}
-  type: Label
+components: []
 container:
-  event_bindings: {show: form_show}
-  type: ColumnPanel
+  properties:
+    html: |-
+      <center style="font-style:italic; color:#888; margin: 3em;">
+        (Insert your custom HTML here)
+      </center>
+      <div anvil-slot="default"></div>
+  type: HtmlTemplate
 is_package: true
