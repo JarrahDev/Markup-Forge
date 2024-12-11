@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<script>
+const fs = require('fs');
+let btnfp = '_/theme/W3/btns.css'  
+fs.readFile(btnfp, 'utf8', (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(data);
+});
+</script>
+</html>
