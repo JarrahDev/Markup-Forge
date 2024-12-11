@@ -16,10 +16,6 @@ components:
       name: button_1
       properties: {align: full, background: 'rgba(28, 27, 31, 0.38)', bold: false, foreground: '', icon: 'fa:html5', icon_align: right, italic: false, text: HTML, underline: false}
       type: Button
-    - layout_properties: {grid_position: 'CPPPKC,RHRWEM'}
-      name: spacer_1
-      properties: {height: 32}
-      type: Spacer
     - data_bindings: []
       event_bindings: {click: button_2_click}
       layout_properties: {grid_position: 'CPPPKC,ZDNVOP'}
