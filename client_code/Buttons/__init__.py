@@ -8,13 +8,23 @@ with open("_/theme/W3/JS.html", "r") as html_file:
 
 # Find all <script> tags
 script_tags = soup.find_all('script')
+listJS = []
 # Extract and print JavaScript line by line
-def displayJS():
-for script in script_tags:
+def displayJS(listJS):
+  for script in script_tags:
     if script.string:  # Ensure the <script> tag contains text
         js_code = script.string.strip()
         js_lines = re.split(r'\n', js_code)  # Split code into lines using regex
         for line in js_lines:
-            print(line.strip())  # Print each line after stripping extra whitespace
-            
+          strpline = line.strip()  # Print each line after stripping extra whitespace
+          print_lines = input("Do you want to print the JS lines? (Y/N)")
+          if print_lines.strip().lower() == 'y' is True:  # Handle input correctly
+                    print("Here is the JS Code:", strpline)
+                listJS.append(strpline)  # Append line to list
+            # Check if the list is successfully populated
+            if listJS:
+                print("Lines of code were successfully appended into the list!")
+            else:
+                print("No lines of code were added to the list.")
+  displayJS()
 

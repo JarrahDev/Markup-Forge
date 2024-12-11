@@ -621,7 +621,37 @@ button.close > span, button.close {
   color: %color:Primary%;
 }
 
+.button-html5 {
+    background-image: url('_/theme/Images/html5-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 16px;
+    border: none;
+    padding: 20px;
+    width: 150px; /* Adjust button dimensions */
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.button-css3 {
+    background-image: url('_/theme/css3-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 16px;
+    border: none;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .anvil-role-outlined-button > .btn, .anvil-role-outlined-button.file-loader>label {
