@@ -14,18 +14,17 @@ components:
       event_bindings: {click: button_1_click}
       layout_properties: {full_width_row: true, grid_position: 'CPPPKC,NFJMTU'}
       name: button_1
-      properties: {align: full, background: 'rgba(28, 27, 31, 0.38)', bold: false, foreground: '', italic: false, text: HTML5, underline: false}
+      properties: {align: full, background: 'rgba(28, 27, 31, 0.38)', bold: false, foreground: '', icon: 'fa:html5', icon_align: right, italic: false, text: HTML, underline: false}
       type: Button
     - layout_properties: {grid_position: 'CPPPKC,RHRWEM'}
       name: spacer_1
       properties: {height: 32}
       type: Spacer
-    - data_bindings:
-      - {code: '', property: background, writeback: false}
+    - data_bindings: []
       event_bindings: {click: button_2_click}
       layout_properties: {grid_position: 'CPPPKC,ZDNVOP'}
       name: button_2
-      properties: {align: full, background: '', bold: false, text: CSS3}
+      properties: {align: full, background: 'theme:On Disabled', bold: false, icon: 'fa:css3', icon_align: right, text: CSS}
       type: Button
     layout_properties: {grid_position: 'NSCDQC,DXQPXT'}
     name: column_panel_3
