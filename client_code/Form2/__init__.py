@@ -1,23 +1,36 @@
 from ._anvil_designer import Form2Template
-from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
+from anvil import *
 
 class Form2(Form2Template):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.markdown_input.text = ""  # Initialize empty markdown
+    self.update_preview()
     
+  def markdown_input_change(self, **event_args):
+    """Triggered whenever the user types in the Markdown TextArea."""
+    self.update_preview()
+  def update_preview(self):
+    """Send Markdown to the server and display the generated HTML."""
+    markdown_content = self.markdown_input.text
+    try:
+      html_content = anvil.server.call('generate_html', markdown_content)
+      self.html_preview.html = html_content
+    except Exception as e:
+      alert(f"Error updating preview: {e}")
+  def export_button_click(self, **event_args):
+    """Export the final HTML as a file."""
+    markdown_content = self.markdown_input.text
+    try:
+        file = anvil.server.call('export_html', markdown_content)
+        download(file)
+    except Exception as e:
+      alert(f"Error exporting HTML: {e}")
+      
 
-  def button_1_click(self, **event_args):
-    """This method is called when the CSS3 button is clicked"""
-    print("CSS3 Button clicked!")
-    # Add any functionality you want for button 1
-
-  def button_2_click(self, **event_args):
-    """This method is called when the HTML5 button is clicked"""
-    print("HTML5 Button clicked!")
-    # Add any functionality you want for button 2
+   

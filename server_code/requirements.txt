@@ -1,3 +1,4 @@
 beautifulsoup4==4.13.0b2
 hugo==0.139.4
+markdown2==2.5.2
 Markdown==3.7

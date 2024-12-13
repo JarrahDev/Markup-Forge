@@ -27,8 +27,9 @@ components:
     properties: {}
     type: ColumnPanel
   - components:
-    - layout_properties: {col_xs: 0, row: KGXNBL, width_xs: 6}
-      name: type_here_please
+    - event_bindings: {change: markdown_input_change}
+      layout_properties: {col_xs: 0, row: KGXNBL, width_xs: 6}
+      name: markdown_input
       properties: {bold: false, height: 442.6666564941406, italic: true, underline: false, visible: true}
       type: TextArea
     - layout_properties: {col_xs: 6, row: KGXNBL, width_xs: 6}

@@ -36,8 +36,7 @@ unique_ids:
     theme.css: FC3LC734MECPJTBBCWC4IUIJB4AR5F2Q
   forms:
     Form2: '1733780984180588836758358.3667'
-  modules:
-    Buttons: '1733928902869722099588502.3351'
+  modules: {}
   scripts: {}
   server_modules:
     ServerModule1: '1733759525128719300822288.7361'
